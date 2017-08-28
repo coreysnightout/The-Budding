@@ -7,6 +7,10 @@ import Houseplants from './Houseplants';
 
 class UserPlantVarieties extends React.Component {
 
+  constructor(props){
+    super(props)
+    this.addWater = this.addWater.bind(this);
+  }
 
   render() {
 
@@ -15,7 +19,7 @@ class UserPlantVarieties extends React.Component {
       justifyContent: "space-around",
       marginTop: "25px"
     }
-    
+
     return (
       <div>
         <div style={plantStyles}>
