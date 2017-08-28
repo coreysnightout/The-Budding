@@ -28,6 +28,8 @@ class Plants extends React.Component {
 
       return (
         <div>
+          <PlantControls
+            waterPlants={this.waterPlants}/>
         </div>
       );
     }
