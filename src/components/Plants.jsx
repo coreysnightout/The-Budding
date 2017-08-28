@@ -15,8 +15,8 @@ class Plants extends React.Component {
 
   componentDidMount() {
     var test = setInterval(() =>
-  this.waterPlants(),
-  1000
+    this.waterPlants(),
+    1000
     );
   }
 
@@ -24,7 +24,12 @@ class Plants extends React.Component {
     var newState = this.state.Plants;
     this.setState({Plants: newState});
     console.log(newState.waterLevel += 25);
-    alert("hi");
+  }
+
+  componentWillUnmount(){
+    if (test < 100) {
+    clearInterval(test)
+    }
   }
 
   render() {
