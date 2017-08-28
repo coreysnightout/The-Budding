@@ -1,3 +1,16 @@
 * {
-  background: salmon;
+  background: ivory;
+  font-family: sans-serif;
+}
+
+p {
+  font-family: monospace;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00ffcc;
 }
