@@ -13,6 +13,12 @@ class Plants extends React.Component {
     }
   }
 
+  waterPlants(){
+    var newState = this.state.Plants;
+    this.setState({Plants: newState});
+    console.log(newState.waterLevel += 25);
+  }
+
   render() {
       var plantStyles = {
         display: "flex",
