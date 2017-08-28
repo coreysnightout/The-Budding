@@ -9,19 +9,26 @@ class Plants extends React.Component {
     this.waterPlants = this.waterPlants.bind(this);
     this.state = {
       dead: false,
-      Plants: new PlantsModel(100)
+      plants: new PlantsModel(100)
     }
   }
 
   componentDidMount() {
     var test = setInterval(() =>
-    this.waterPlants(),
+    this.water(),
     1000
     );
   }
 
-  waterPlants(){
-    var newState = this.state.Plants;
+  water() {
+    this.state.plants.waterLevel -= 10;
+    var newState = this.state.plants;
+    this.setState({Plants: newState});
+    newState.waterLevel = 200;
+  }
+
+  waterPlants(){ //feedTama
+    var newState = this.state.plants;
     this.setState({Plants: newState});
     console.log(newState.waterLevel += 25);
   }
@@ -42,7 +49,8 @@ class Plants extends React.Component {
       return (
         <div>
           <PlantControls
-            waterPlants={this.waterPlants}/>
+            waterPlants={this.waterPlants}
+          water={this.state.plants}/>
         </div>
       );
     }

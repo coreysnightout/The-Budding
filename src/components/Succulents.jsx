@@ -2,7 +2,9 @@ import React from 'react';
 
 function Succulents(props) {
 
-  alert("hi");
+  // if (props.water.waterLevel === 0){
+  //   alert('dead plants');
+  // }
     return (
       <div>
         <p>Succulents</p>

@@ -16,7 +16,8 @@ function PlantControls(props) {
     return (
       <div>
         <div style={plantStyles}>
-          <Succulents waterPlants={props.waterPlants}/>
+          <Succulents waterPlants={props.waterPlants}
+          water={props.water}/>
           <Tropical/>
           <FruitTrees/>
           <Tomatoes/>
