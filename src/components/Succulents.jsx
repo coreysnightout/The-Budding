@@ -1,7 +1,6 @@
 import React from 'react';
 
-class Succulents extends React.Component {
-  render() {
+function Succulents(props) {
     return (
       <div>
         <p>Succulents</p>
@@ -9,6 +8,5 @@ class Succulents extends React.Component {
       </div>
     );
   }
-}
 
 export default Succulents;

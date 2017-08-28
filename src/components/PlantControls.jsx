@@ -5,14 +5,7 @@ import FruitTrees from './FruitTrees';
 import Tomatoes from './Tomatoes';
 import Houseplants from './Houseplants';
 
-class UserPlantVarieties extends React.Component {
-
-  constructor(props){
-    super(props)
-    this.addWater = this.addWater.bind(this);
-  }
-
-  render() {
+function PlantControls(props) {
 
     var plantStyles = {
       display: "flex",
@@ -32,6 +25,5 @@ class UserPlantVarieties extends React.Component {
       </div>
     );
   }
-}
 
-export default UserPlantVarieties;
+export default PlantControls;
