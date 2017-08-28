@@ -13,10 +13,18 @@ class Plants extends React.Component {
     }
   }
 
+  componentDidMount() {
+    var test = setInterval(() =>
+  this.waterPlants(),
+  1000
+    );
+  }
+
   waterPlants(){
     var newState = this.state.Plants;
     this.setState({Plants: newState});
     console.log(newState.waterLevel += 25);
+    alert("hi");
   }
 
   render() {
